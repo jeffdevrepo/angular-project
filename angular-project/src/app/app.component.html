@@ -1,0 +1,39 @@
+<form action="" #form="ngForm">
+  <input type="text" name="dog" [(ngModel)]="dogsName">
+  <button (click)="addDog()">Add pet</button>
+</form>
+
+<div class="container">
+  <div class="col">
+    <p>Listed</p>
+    <ul>
+      <ng-container *ngFor="let dog of dogs">
+        <li *ngIf="dog.status == 'listed' ">
+          <span>{{dog.name}}</span>
+          <button (click)="changeListedStatus(dog)">next</button>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  <div class="col">
+    <p>Examining</p>
+    <ul>
+      <ng-container *ngFor="let dog of dogs">
+        <li *ngIf="dog.status == 'examining' ">
+          <span>{{dog.name}}</span>
+          <button (click)="changeExaminingStatus(dog)">next</button>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  <div class="col">
+    <p>Back to hooman</p>
+    <ul>
+      <ng-container *ngFor="let dog of dogs">
+        <li *ngIf="dog.status == 'finally_back_to_hooman' ">
+          <span>{{dog.name}}</span>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</div>

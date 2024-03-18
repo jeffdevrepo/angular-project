@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.col {
+  flex: 1 1 auto;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.col ul li {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #000;
+  min-height: 38.5px;
+}
+
+.col p {
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #000;
+}
